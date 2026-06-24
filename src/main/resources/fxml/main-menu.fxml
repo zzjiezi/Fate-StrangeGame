@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="com.game.rpg.ui.controllers.MainMenuController"
+      styleClass="root" 
+      alignment="CENTER" 
+      spacing="30">
+    
+    <ImageView fx:id="backgroundImage" 
+               fitWidth="1280" 
+               fitHeight="720" 
+               preserveRatio="false"/>
+    
+    <StackPane>
+        <VBox alignment="CENTER" spacing="50" style="-fx-padding: 100;">
+            
+            <Text text="RPG Game" 
+                  styleClass="menu-title"/>
+            
+            <Text text="圣杯战争" 
+                  style="-fx-font-size: 32px; -fx-text-fill: white;"/>
+            
+            <VBox alignment="CENTER" spacing="20">
+                <Button text="新游戏" 
+                        onAction="#handleNewGame" 
+                        prefWidth="300" 
+                        styleClass="button"/>
+                
+                <Button text="读取存档" 
+                        onAction="#handleLoadGame" 
+                        prefWidth="300" 
+                        styleClass="button"/>
+                
+                <Button text="成就查询" 
+                        onAction="#handleAchievements" 
+                        prefWidth="300" 
+                        styleClass="button"/>
+                
+                <Button text="退出游戏" 
+                        onAction="#handleExit" 
+                        prefWidth="300" 
+                        styleClass="button"/>
+            </VBox>
+            
+        </VBox>
+    </StackPane>
+    
+</VBox>
